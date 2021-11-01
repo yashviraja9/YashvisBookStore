@@ -14,6 +14,17 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="5.0.11" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.11" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.8" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\YashvisBooks.DataAccess\YashvisBooks.DataAccess.csproj" />
+    <ProjectReference Include="..\YashvisBooks.Models\YashvisBooks.Models.csproj" />
+    <ProjectReference Include="..\YashvisBooks.Utility\YashvisBooks.Utility.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\" />
   </ItemGroup>
 
 </Project>

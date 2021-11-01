@@ -25,10 +25,28 @@ Add to the _Layout.cshtml page the additional stylesheets and scripts from the C
 
 In _Layout.cshtml add a drop down to the Nav Bar.
 
-Add three (3) new projects (class library) to the application: YashvisBooks.DataAccess, YashvisBooks.Models, YashvisBooks.Utility
-
-Copy the ‘Data’ folder and paste to .DataAccess project (delete the original)
+Add three (3) new projects (class library) to the application: YashvisBooks.DataAccess, YashvisBooks.Models, YashvisBooks.Utility. Copy the ‘Data’ folder and paste to .DataAccess project (delete the original)
 
 Install Microsoft.EntityFrameworkCore.Relational and Core.SqlServer packages
 
-Delete the Migrations folder
+Delete the Migrations folder. Add another package Identity.EntityFrameworkCore, upload changes to github.
+
+Finish at 12:55pm 
+
+start at 1:10pm
+
+Modify the namespace in ApplicatiobDbContext page and delete the class1 file from .DataAccess,
+.Models and .Utility project.
+
+try to build project and move on next step
+
+Move Models in to YashvisBooks.Models (delete original), Modify Views > Shared >  Error.cshtml
+
+now right click on Project - Add - Project Reference - .DataAccess and .Models
+
+Rename Models folder to ViewModels and Cchange the ErrorViewModels.cs namespace .Models.ViewModels
+
+try to build project.
+
+
+
