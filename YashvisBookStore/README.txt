@@ -12,6 +12,7 @@ modify the startup page to delete options => options.SignIn.RequireConfirmedAcco
 
 Now open https://bootswatch.com and select one of theme and download it and save it as bootstrap_new.csse. In  project wwwrooot/li/bootstrap/css/ add this file.
 Open views/chared/_Layout.cshtml change the file name in link tag.
+Update the changes to github repository.
 
 finish at 10:40am
 
@@ -24,7 +25,8 @@ In _Layout.cshtml add a drop down to the Nav Bar.
 
 Add three (3) new projects (class library) to the application: YashvisBooks.DataAccess, YashvisBooks.Models, YashvisBooks.Utility. Copy the ‘Data’ folder and paste to .DataAccess project (delete the original)
 
-Install Microsoft.EntityFrameworkCore.Relational and Core.SqlServer packages. Delete the Migrations folder. Add another package Identity.EntityFrameworkCore, upload changes to github.
+Install Microsoft.EntityFrameworkCore.Relational and Core.SqlServer packages. Delete the Migrations folder. Add another package Identity.EntityFrameworkCore,
+upload changes to github.
 
 Finish at 12:55pm 
 
@@ -51,6 +53,15 @@ Move to next step. Add a ‘Customers’ area to Areas, Change the routes in Sta
 Move the HomeController.cs to the Area > Customer > Controller folder and delete Data and Models. Edit the HomeController.cs to explicitly define that the controller is in the Customer Area. Move Views > Home and modify the HomeController namespace. Run the application.
 
 Views are now in Areas, but master page is defined in _ViewStart, Copy _ViewImport and _ViewStart to Customer Area. 
-Modify the _ViewStart.cshtml to reflect the new path. Run the application now
+Modify the _ViewStart.cshtml to reflect the new path. Run the application now.
+
+Update the changes to github repository.
 
 finish at 2:50pm
+
+start at 9:30pm
+
+Add a new Admin area in Areas. Add the proper view files and delete the Data and Models folder. Delete the Controllers folder
+
+Update changes to GitHub repository.
+
