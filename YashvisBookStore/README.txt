@@ -61,7 +61,14 @@ finish at 2:50pm
 
 start at 9:30pm
 
-Add a new Admin area in Areas. Add the proper view files and delete the Data and Models folder. Delete the Controllers folder
+Add a new Admin area in Areas. Add the view files _ViewImports and _ViewStart and delete the Data and Models folder. Delete the Controllers folder.
+
+try to run the application but i got error 
+An unhandled exception occurred while processing the request.
+InvalidOperationException: The constraint reference 'Customer' could not be resolved to a type.
+Register the constraint type with 'Microsoft.AspNetCore.Routing.RouteOptions.ConstraintMap'.
 
 Update changes to GitHub repository.
+
+Finish at 9:50pm
 
