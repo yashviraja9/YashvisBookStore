@@ -19,34 +19,38 @@ Nov 1 - 11:25am
 Open _Layout.cshtml file change the nav class from navbar-light to navbar dark and bg-white to bg-primary and line 22 and 25 - remove text-dark, 
 add additional properties text-white-50 bg-primary to the footer class.
 
-Open LoginPartial.cshtml and remove text-dark.
-
-Add to the _Layout.cshtml page the additional stylesheets and scripts from the CSS_JS.txt file.
-
+Open LoginPartial.cshtml and remove text-dark. Add to the _Layout.cshtml page the additional stylesheets and scripts from the CSS_JS.txt file.
 In _Layout.cshtml add a drop down to the Nav Bar.
 
 Add three (3) new projects (class library) to the application: YashvisBooks.DataAccess, YashvisBooks.Models, YashvisBooks.Utility. Copy the ‘Data’ folder and paste to .DataAccess project (delete the original)
 
-Install Microsoft.EntityFrameworkCore.Relational and Core.SqlServer packages
-
-Delete the Migrations folder. Add another package Identity.EntityFrameworkCore, upload changes to github.
+Install Microsoft.EntityFrameworkCore.Relational and Core.SqlServer packages. Delete the Migrations folder. Add another package Identity.EntityFrameworkCore, upload changes to github.
 
 Finish at 12:55pm 
 
 start at 1:10pm
 
 Modify the namespace in ApplicatiobDbContext page and delete the class1 file from .DataAccess,
-.Models and .Utility project.
+.Models and .Utility project. try to build project and move on next step
 
-try to build project and move on next step
+Move Models in to YashvisBooks.Models (delete original), Modify Views > Shared >  Error.cshtml. 
 
-Move Models in to YashvisBooks.Models (delete original), Modify Views > Shared >  Error.cshtml
+Now right click on Project - Add - Project Reference - .DataAccess and .Models. Rename Models folder to ViewModels and change the ErrorViewModels.cs namespace .Models.ViewModels, now try to build project.
 
-now right click on Project - Add - Project Reference - .DataAccess and .Models
+Modify Startup.cs service ‘AddContext’ with the using YashvisBookStore.DataAccess.Data; statement Run the application and review errors.
+Remove the using YashvisBookStore.Data statement.
 
-Rename Models folder to ViewModels and Cchange the ErrorViewModels.cs namespace .Models.ViewModels
+Open Error.cshtml, correct any default reference to ErrorViewModel to the new YashvisBookStore.Models.ViewModels.ErrorViewModel.
+When all errors are resolved run the application and review the browser presentation.
 
-try to build project.
+In the Utility project, create a static details class called SD.cs, Modify the properties of the class, Add project reference to the main project
+by right click on project add > project prefrence. In the DataAccess project add project references to Models and Utility.
 
+Move to next step. Add a ‘Customers’ area to Areas, Change the routes in Startup.cs like the one outlined in the ScaffoldingReadMe.txt
 
+Move the HomeController.cs to the Area > Customer > Controller folder and delete Data and Models. Edit the HomeController.cs to explicitly define that the controller is in the Customer Area. Move Views > Home and modify the HomeController namespace. Run the application.
 
+Views are now in Areas, but master page is defined in _ViewStart, Copy _ViewImport and _ViewStart to Customer Area. 
+Modify the _ViewStart.cshtml to reflect the new path. Run the application now
+
+finish at 2:50pm
