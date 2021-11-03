@@ -23,7 +23,8 @@ add additional properties text-white-50 bg-primary to the footer class.
 Open LoginPartial.cshtml and remove text-dark. Add to the _Layout.cshtml page the additional stylesheets and scripts from the CSS_JS.txt file.
 In _Layout.cshtml add a drop down to the Nav Bar.
 
-Add three (3) new projects (class library) to the application: YashvisBooks.DataAccess, YashvisBooks.Models, YashvisBooks.Utility. Copy the ‘Data’ folder and paste to .DataAccess project (delete the original)
+Add three (3) new projects (class library) to the application: YashvisBooks.DataAccess, YashvisBooks.Models, YashvisBooks.Utility. Copy the ‘Data’ folder and paste to 
+.DataAccess project (delete the original)
 
 Install Microsoft.EntityFrameworkCore.Relational and Core.SqlServer packages. Delete the Migrations folder. Add another package Identity.EntityFrameworkCore,
 upload changes to github.
@@ -37,7 +38,8 @@ Modify the namespace in ApplicatiobDbContext page and delete the class1 file fro
 
 Move Models in to YashvisBooks.Models (delete original), Modify Views > Shared >  Error.cshtml. 
 
-Now right click on Project - Add - Project Reference - .DataAccess and .Models. Rename Models folder to ViewModels and change the ErrorViewModels.cs namespace .Models.ViewModels, now try to build project.
+Now right click on Project - Add - Project Reference - .DataAccess and .Models. Rename Models folder to ViewModels and change the ErrorViewModels.cs namespace .Models.ViewModels, 
+now try to build project.
 
 Modify Startup.cs service ‘AddContext’ with the using YashvisBookStore.DataAccess.Data; statement Run the application and review errors.
 Remove the using YashvisBookStore.Data statement.
@@ -50,7 +52,8 @@ by right click on project add > project prefrence. In the DataAccess project add
 
 Move to next step. Add a ‘Customers’ area to Areas, Change the routes in Startup.cs like the one outlined in the ScaffoldingReadMe.txt
 
-Move the HomeController.cs to the Area > Customer > Controller folder and delete Data and Models. Edit the HomeController.cs to explicitly define that the controller is in the Customer Area. Move Views > Home and modify the HomeController namespace. Run the application.
+Move the HomeController.cs to the Area > Customer > Controller folder and delete Data and Models. Edit the HomeController.cs to explicitly define that the controller is in the Customer Area. 
+Move Views > Home and modify the HomeController namespace. Run the application.
 
 Views are now in Areas, but master page is defined in _ViewStart, Copy _ViewImport and _ViewStart to Customer Area. 
 Modify the _ViewStart.cshtml to reflect the new path. Run the application now.
@@ -63,9 +66,9 @@ start at 9:30pm
 
 Add a new Admin area in Areas. Add the view files _ViewImports and _ViewStart and delete the Data and Models folder. Delete the Controllers folder.
 
-try to run the application but i got error 
+try to run the application but i got error :
 An unhandled exception occurred while processing the request.
-InvalidOperationException: The constraint reference 'Customer' could not be resolved to a type.
+InvalidOperationException: The constraint reference 'Customer' could not be resolved to a type. 
 Register the constraint type with 'Microsoft.AspNetCore.Routing.RouteOptions.ConstraintMap'.
 
 Update changes to GitHub repository.
