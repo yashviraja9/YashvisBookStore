@@ -5,6 +5,8 @@ Program purpose: Create an application for Book Store using ASP.NET Core Program
 Author: Yashvi Raja,
 Date Modified: 2021-10-25
 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Oct 25 – 9:45am Start working on assignment, then open visual studio and start working on create new project named YashvisBookStore and 
 turn on the enable Razor runtime compilation white createing project, and modified the launchsetting.json file to do comment sslport to run the app.
 
@@ -15,6 +17,8 @@ Open views/chared/_Layout.cshtml change the file name in link tag.
 Update the changes to github repository.
 
 finish at 10:40am
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Nov 1 - 11:25am
 Open _Layout.cshtml file change the nav class from navbar-light to navbar dark and bg-white to bg-primary and line 22 and 25 - remove text-dark, 
@@ -30,6 +34,8 @@ Install Microsoft.EntityFrameworkCore.Relational and Core.SqlServer packages. De
 upload changes to github.
 
 Finish at 12:55pm 
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 start at 1:10pm
 
@@ -62,6 +68,8 @@ Update the changes to github repository.
 
 finish at 2:50pm
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 start at 9:30pm
 
 Add a new Admin area in Areas. Add the view files _ViewImports and _ViewStart and delete the Data and Models folder. Delete the Controllers folder.
@@ -74,6 +82,8 @@ Register the constraint type with 'Microsoft.AspNetCore.Routing.RouteOptions.Con
 Update changes to GitHub repository.
 
 Finish at 9:50pm
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Nov 03 : 9:25am
 
