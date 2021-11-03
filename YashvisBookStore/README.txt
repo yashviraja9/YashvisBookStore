@@ -72,3 +72,6 @@ Update changes to GitHub repository.
 
 Finish at 9:50pm
 
+Nov 03 : 9:25am
+
+I solved error by modified statup page.
