@@ -12,7 +12,8 @@ turn on the enable Razor runtime compilation white createing project, and modifi
 
 modify the startup page to delete options => options.SignIn.RequireConfirmedAccount = true and create repository on GitHub with name YashvisBookStore.
 
-Now open https://bootswatch.com and select one of theme and download it and save it as bootstrap_new.csse. In  project wwwrooot/li/bootstrap/css/ add this file.
+
+Now open https://bootswatch.com and select one of cosmo theme and download it and save it as bootstrap_new.csse. In  project wwwrooot/li/bootstrap/css/ add this file.
 Open views/chared/_Layout.cshtml change the file name in link tag.
 Update the changes to github repository.
 
