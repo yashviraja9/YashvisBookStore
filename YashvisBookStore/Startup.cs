@@ -59,6 +59,7 @@ namespace YashvisBookStore
             app.UseAuthentication();
             app.UseAuthorization();
 
+            //i got error for unhandled exception so i modified this method.
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
