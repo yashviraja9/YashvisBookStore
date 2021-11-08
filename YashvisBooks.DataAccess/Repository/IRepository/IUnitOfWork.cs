@@ -1,5 +1,4 @@
-﻿using YashvisBooks.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace YashvisBooks.DataAccess.Repository.IRepository
 {
-    public interface ICategoryRepository : IRepository<Category>
+    interface IUnitOfWork : IDisposable
     {
-        void Update(CategoryRepository category);
+        ICategoryRepository Category { get;  }
+        ISP_Call SP_Call { get; }
     }
 }

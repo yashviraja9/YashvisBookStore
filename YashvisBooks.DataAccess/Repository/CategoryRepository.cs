@@ -28,7 +28,7 @@ namespace YashvisBooks.DataAccess.Repository
             }
         }
 
-        public void Update(Category category)
+        public void Update(CategoryRepository category)
         {
             throw new NotImplementedException();
         }

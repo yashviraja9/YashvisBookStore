@@ -1,4 +1,4 @@
-﻿using YashvisBooks.DataAccess.Repository.IRepsitory;
+﻿using YashvisBooks.DataAccess.Repository.IRepository;
 using YashvisBookStore.DataAccess.Data;
 using Microsoft.EntityFrameworkCore;
 using System;
