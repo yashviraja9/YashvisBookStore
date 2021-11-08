@@ -100,3 +100,10 @@ Use the NuGet Package Manager Console to  add-migration AddDefaultIdentityMigrat
 Change to the correct default project (.DataAccess) and add run again. now it build succeeded.
 
 
+Review the AddDefaultIdentityMigration.cs file for the SQL-like syntax, statements, columns and primary key constraints, tables related the ASP.NET Identity.
+
+Once the migration is complete, the database needs to be updated. In the PM console, update the database now.
+
+Review the updated database in the SQL Server Object Explorer. Check for errors, run the application.
+
+
