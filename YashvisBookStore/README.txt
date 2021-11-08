@@ -104,6 +104,13 @@ Review the AddDefaultIdentityMigration.cs file for the SQL-like syntax, statemen
 
 Once the migration is complete, the database needs to be updated. In the PM console, update the database now.
 
-Review the updated database in the SQL Server Object Explorer. Check for errors, run the application.
+Review the updated database in the SQL Server Object Explorer. Check for errors, run the application. push commits to GitHub.
 
+Add a new table to the DB by creating a Category model and push it to the DB: Add a new class file to the .Models project and modify it.
 
+add-migration AddCategoryToDb via the PM Console- , The new migration file will be empty because it hasn’t been added to the Application DB Context
+
+Update this and note the added using statement, re-run the add-migration, but i get error that The name 'AddCategoryToDb' is used by an existing migration, so i deleted already existed and 
+and add that migration again, review the changes to the AddCategoryToDb (resolve the duplication error that will occur).
+
+Update the database, confirm the new Categories table via the SQL SOE and push commits to GitHub.
