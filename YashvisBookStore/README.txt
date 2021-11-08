@@ -92,7 +92,7 @@ I solved error by modified statup page.
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Nov 08 : 10:55 - Start Part - 2.1 - Create the DB
+Nov 08 : 10:55am - Start Part - 2.1 - Create the DB
 
 To prepare for the next part, ‘build’ the application and confirm there are no errors, Review appsettings.json, modify the database name and save.
 
@@ -117,4 +117,15 @@ Update the database, confirm the new Categories table via the SQL SOE and push c
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Start Part 2.2 - Repository
+12:55pm Start Part 2.2 - Repository 
+
+After creating the Category.cs and adding it to the ApplicationDbContext it’s time to implement the Repository, a generic way of accessing common functionality, in the .DataAccess project.
+
+Add a new folder name it Repository and add an IRepository folder inside it. Add a new item of type interface to the folder and name it IRepository.cs 
+
+Modify so it can be used on the Category class to do all the CRUD operations by adding using statements.
+Methods to use for CRUD: Get item from the DB, List of Categories, Add objects, Remove objects
+
+Implement the class that implements the repository, add Repository.cs class in Repository folder.
+
+Include the using statement, View the potential fixes and implement interface, Modify the code to create the constructors and dependency injection (DI).
