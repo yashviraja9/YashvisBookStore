@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using YashvisBooks.Models;
 
 namespace YashvisBookStore.DataAccess.Data
 {
@@ -12,5 +13,7 @@ namespace YashvisBookStore.DataAccess.Data
             : base(options)
         {
         }
+
+        public DbSet<Category> Categories { get; set; }
     }
 }
