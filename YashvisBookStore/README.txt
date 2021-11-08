@@ -89,3 +89,14 @@ Finish at 9:50pm
 Nov 03 : 9:25am
 
 I solved error by modified statup page.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Nov 08 : 10:55 - Start Part - 2
+
+To prepare for the next part, ‘build’ the application and confirm there are no errors, Review appsettings.json, modify the database name and save.
+
+Use the NuGet Package Manager Console to  add-migration AddDefaultIdentityMigration, but i get error for does not match migrations.
+Change to the correct default project (.DataAccess) and add run again. now it build succeeded.
+
+
