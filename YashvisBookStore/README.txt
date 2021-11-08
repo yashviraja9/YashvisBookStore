@@ -92,7 +92,7 @@ I solved error by modified statup page.
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Nov 08 : 10:55 - Start Part - 2
+Nov 08 : 10:55 - Start Part - 2.1 - Create the DB
 
 To prepare for the next part, ‘build’ the application and confirm there are no errors, Review appsettings.json, modify the database name and save.
 
@@ -114,3 +114,7 @@ Update this and note the added using statement, re-run the add-migration, but i 
 and add that migration again, review the changes to the AddCategoryToDb (resolve the duplication error that will occur).
 
 Update the database, confirm the new Categories table via the SQL SOE and push commits to GitHub.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Start Part 2.2 - Repository
