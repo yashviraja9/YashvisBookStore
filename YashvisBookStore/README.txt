@@ -158,5 +158,26 @@ try to build but i get error in startup page, so i just push commits to GitHub.
 Finish at 2:22pm
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Start Nov 10 : 9:20am
+Start Nov 10 : 9:25am
 
+Start part -  2.3 Category CRUD
+
+Add a new MVC Controller - Empty inside Areas/Admin, Name it CategoryController.cs
+Modify the code to use the IUnitOfWork from the .DataAccess project and the IRepository folder by asdding using statement.
+
+Add a new folder in the Areas/View with the same name as the Controller.
+
+Add a new ‘Index’ view to the folder and modify with the generic HTML code from the Category Index View.txt file found in the Assignment 2 - Files folder 
+Save and run the application
+
+In _Layout.cshtml, move the ‘Category’ link to the Content Management drop-down. Review the changes to the navigation, Push to GitHub.
+
+Modify the Index.cshtml to add the icons in the Category section from Font Awesome and confirm.
+
+Delete it and add the JavaScript from the Assignment 2 files folder in to the wwwroot/js folder, note the ‘div’ is now in the return portion of the category.js file
+
+In Index.cshtml add the @section call to the category.js script and run the project.
+
+
+2111100948 - error - Severity	Code	Description	Project	File	Line	Suppression State
+Error	CS0311	The type 'YashvisBooks.DataAccess.Repository.UnitOfWork' cannot be used as type parameter 'TImplementation' in the generic type or method 'ServiceCollectionServiceExtensions.AddScoped<TService, TImplementation>(IServiceCollection)'. There is no implicit reference conversion from 'YashvisBooks.DataAccess.Repository.UnitOfWork' to 'YashvisBooks.DataAccess.Repository.IRepository.IUnitOfWork'.	YashvisBookStore	C:\Users\W0766432\Source\Repos\YashvisBookStore\YashvisBookStore\Startup.cs	39	Active

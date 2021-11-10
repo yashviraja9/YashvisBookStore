@@ -13,7 +13,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using YashvisBookStore.DataAccess.Data;
 using YashvisBooks.DataAccess.Repository.IRepository;
-using YashvisBooks.DataAccess.Repository;
 
 namespace YashvisBookStore
 {
@@ -36,7 +35,7 @@ namespace YashvisBookStore
 
             services.AddDefaultIdentity<IdentityUser>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
-            services.AddScoped<UnitOfWork, UnitOfWork>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();  //why is this happening? 
             services.AddControllersWithViews();
         }
 
