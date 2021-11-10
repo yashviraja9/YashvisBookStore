@@ -5,7 +5,7 @@ Program purpose: Create an application for Book Store using ASP.NET Core Program
 Author: Yashvi Raja,
 Date Modified: 2021-10-25
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Oct 25 – 9:45am Start working on assignment, then open visual studio and start working on create new project named YashvisBookStore and 
 turn on the enable Razor runtime compilation white createing project, and modified the launchsetting.json file to do comment sslport to run the app.
@@ -19,7 +19,7 @@ Update the changes to github repository.
 
 finish at 10:40am
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Nov 1 - 11:25am
 Open _Layout.cshtml file change the nav class from navbar-light to navbar dark and bg-white to bg-primary and line 22 and 25 - remove text-dark, 
@@ -36,7 +36,7 @@ upload changes to github.
 
 Finish at 12:55pm 
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 start at 1:10pm
 
@@ -69,7 +69,7 @@ Update the changes to github repository.
 
 finish at 2:50pm
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 start at 9:30pm
 
@@ -84,13 +84,13 @@ Update changes to GitHub repository.
 
 Finish at 9:50pm
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Nov 03 : 9:25am
 
 I solved error by modified statup page.
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Nov 08 : 10:55am - Start Part - 2.1 - Create the DB
 
@@ -115,7 +115,7 @@ and add that migration again, review the changes to the AddCategoryToDb (resolve
 
 Update the database, confirm the new Categories table via the SQL SOE and push commits to GitHub.
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 12:55pm Start Part 2.2 - Repository 
 
@@ -129,3 +129,34 @@ Methods to use for CRUD: Get item from the DB, List of Categories, Add objects, 
 Implement the class that implements the repository, add Repository.cs class in Repository folder.
 
 Include the using statement, View the potential fixes and implement interface, Modify the code to create the constructors and dependency injection (DI).
+
+Create individual repos for category and all potential models to be added in the future, CategoryRepository.cs
+and ICategoryRepository.cs.
+
+Modify CategoryRepository (note the using statements and the message for formal parameters – review in Repository.cs the method pointing to the ApplicationDBContext)
+
+Modify ICategoryRepository interface, Review and modify the error now in CategoryRepository.cs (implement the interface to update), Complete the remaining modifications.
+
+Build, fix any error and push commits to GitHub.
+
+Implement a stored procedure repository and map multiple repositories in a Unit of Work
+
+Add a new interface in the IRepository folder - ISP_Call.cs – that extends IDisposable, Include the methods shown and install the NuGet package for Dapper. Now implement this with a new class in the Repository folder.
+
+Add a new class (SP_Call.cs) in the Repository folder, select the appropriate using statement and implement the ISP_Call interface
+
+Add a connection to the database, note the additional using statements, Update the implementation of the ISP_Call interface, Now add the wrapper for Unit of Work.
+
+Add a new interface (IUnitOfWork) to the IRepository folder and update the code.
+
+Now implement this inside the UnitOfWork, Modify the code (make sure the public class implements the interface -  UnitOfWork : IUnitOfWork)
+
+To make it accessible by the project, register it Startup.cs in the ConfigureServices method, add using statement.
+
+try to build but i get error in startup page, so i just push commits to GitHub.
+
+Finish at 2:22pm
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Start Nov 10 : 9:20am
+
