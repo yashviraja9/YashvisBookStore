@@ -20,6 +20,8 @@ namespace YashvisBooks.DataAccess.Repository
 
         public void Upadte(Category category)
         {
+            //use .NET LINQ to retrieve the first or default category object,
+            // then pass the id as a generic entity which matches the category ID
             var objFromDb = _db.Categories.FirstOrDefault(s => s.Id == category.Id);
             if(objFromDb != null)
             {
