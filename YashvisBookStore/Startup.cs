@@ -35,7 +35,7 @@ namespace YashvisBookStore
 
             services.AddDefaultIdentity<IdentityUser>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
-            services.AddScoped<IUnitOfWork, UnitOfWork>();  //why is this happening? 
+            //services.AddScoped<IUnitOfWork, UnitOfWork>();  //why is this happening? 
             services.AddControllersWithViews();
         }
 

@@ -7,13 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Areas\Admin\Controllers\**" />
     <Compile Remove="Controllers\**" />
-    <Content Remove="Areas\Admin\Controllers\**" />
     <Content Remove="Controllers\**" />
-    <EmbeddedResource Remove="Areas\Admin\Controllers\**" />
     <EmbeddedResource Remove="Controllers\**" />
-    <None Remove="Areas\Admin\Controllers\**" />
     <None Remove="Controllers\**" />
   </ItemGroup>
 
