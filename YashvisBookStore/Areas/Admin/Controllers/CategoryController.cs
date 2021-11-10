@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using YashvisBooks.DataAccess.Repository.IRepository;
-using YashvisBookStore.DataAccess.Data;
 
 namespace YashvisBookStore.Areas.Admin.Controllers
 {
@@ -30,7 +29,7 @@ namespace YashvisBookStore.Areas.Admin.Controllers
         {
             //return NotFound();
             var allObj = _unitOfWork.Category.GetAll();
-            return Json(new { data = allObj});
+            return Json(new { data = allObj });
         }
     }
     #endregion
