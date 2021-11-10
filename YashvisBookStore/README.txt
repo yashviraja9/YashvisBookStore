@@ -153,7 +153,13 @@ Now implement this inside the UnitOfWork, Modify the code (make sure the public 
 
 To make it accessible by the project, register it Startup.cs in the ConfigureServices method, add using statement.
 
-try to build but i get error in startup page, so i just push commits to GitHub.
+try to build but i get error in startup page,
+2111100948 - error - Severity	Code	Description	Project	File	Line	Suppression State
+Error	CS0311	The type 'YashvisBooks.DataAccess.Repository.UnitOfWork' cannot be used as type parameter 'TImplementation' in the generic type or method 'ServiceCollectionServiceExtensions.AddScoped<TService, 
+TImplementation>(IServiceCollection)'. There is no implicit reference conversion from 'YashvisBooks.DataAccess.Repository.UnitOfWork' to 'YashvisBooks.DataAccess.Repository.IRepository.IUnitOfWork'.
+YashvisBookStore	C:\Users\W0766432\Source\Repos\YashvisBookStore\YashvisBookStore\Startup.cs	39	Active
+
+so i just comment out the statement that throw an error and i push commits to GitHub.
 
 Finish at 2:22pm
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -177,7 +183,3 @@ Modify the Index.cshtml to add the icons in the Category section from Font Aweso
 Delete it and add the JavaScript from the Assignment 2 files folder in to the wwwroot/js folder, note the ‘div’ is now in the return portion of the category.js file
 
 In Index.cshtml add the @section call to the category.js script and run the project.
-
-
-2111100948 - error - Severity	Code	Description	Project	File	Line	Suppression State
-Error	CS0311	The type 'YashvisBooks.DataAccess.Repository.UnitOfWork' cannot be used as type parameter 'TImplementation' in the generic type or method 'ServiceCollectionServiceExtensions.AddScoped<TService, TImplementation>(IServiceCollection)'. There is no implicit reference conversion from 'YashvisBooks.DataAccess.Repository.UnitOfWork' to 'YashvisBooks.DataAccess.Repository.IRepository.IUnitOfWork'.	YashvisBookStore	C:\Users\W0766432\Source\Repos\YashvisBookStore\YashvisBookStore\Startup.cs	39	Active
