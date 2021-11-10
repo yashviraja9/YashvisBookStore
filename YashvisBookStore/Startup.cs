@@ -33,6 +33,7 @@ namespace YashvisBookStore
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDatabaseDeveloperPageExceptionFilter();
 
+            //removed 'options => options.SignIn.RequireConfirmedAccount = true ' 
             services.AddDefaultIdentity<IdentityUser>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             //services.AddScoped<IUnitOfWork, UnitOfWork>();  //why is this happening? 
@@ -62,18 +63,12 @@ namespace YashvisBookStore
             app.UseAuthorization();
 
             //i got error for unhandled exception so i modified this method.
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
-                    name: "MyArea",
-                    pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
-                    //endpoints.MapControllerRoute(
-                    //  name: "default",
-                    //  pattern: "{areas:Customer}/{controller=Home}/{action=Index}/{id?}");
-                 endpoints.MapAreaControllerRoute(
-                    name: "defaultArea",
-                    areaName: "Customer",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    name: "default",
+                    pattern: "{area=Customer}/{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
         }

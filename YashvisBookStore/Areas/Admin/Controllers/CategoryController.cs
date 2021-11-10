@@ -7,6 +7,7 @@ using YashvisBooks.DataAccess.Repository.IRepository;
 
 namespace YashvisBookStore.Areas.Admin.Controllers
 {
+    [Area("Admin")]
     public class CategoryController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
