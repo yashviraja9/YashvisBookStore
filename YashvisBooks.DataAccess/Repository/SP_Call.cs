@@ -12,14 +12,20 @@ namespace YashvisBooks.DataAccess.Repository
 {
     public class SP_Call : ISP_Call
     {
+        // access the database
+ 
         private readonly ApplicationDbContext _db;
         private static string ConnectionString = "";
 
+        // construct to open a SQL connection
+        
         public SP_Call(ApplicationDbContext db)
         {
             _db = db;
             ConnectionString = db.Database.GetDbConnection().ConnectionString;
         }
+        
+        //implements the ISP_Call interface
 
         public void Dispose()
         {
