@@ -183,3 +183,9 @@ Modify the Index.cshtml to add the icons in the Category section from Font Aweso
 Delete it and add the JavaScript from the Assignment 2 files folder in to the wwwroot/js folder, note the ‘div’ is now in the return portion of the category.js file
 
 In Index.cshtml add the @section call to the category.js script and run the project.
+
+when i try to run the project and click on category i get this error:
+
+An unhandled exception occurred while processing the request.
+InvalidOperationException: Unable to resolve service for type 'YashvisBooks.DataAccess.Repository.IRepository.IUnitOfWork'
+while attempting to activate 'YashvisBookStore.Areas.Admin.Controllers.CategoryController'.
