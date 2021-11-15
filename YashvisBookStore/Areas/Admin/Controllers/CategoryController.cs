@@ -26,13 +26,13 @@ namespace YashvisBookStore.Areas.Admin.Controllers
         public IActionResult Upsert(int? id)
         {
             Category category = new Category();
-            if(id == null)
+            if (id == null)
             {
                 return View(category);
             }
 
             category = _unitOfWork.Category.Get(id.GetValueOrDefault());
-            if(category == null)
+            if (category == null)
             {
                 return NotFound();
             }
@@ -45,7 +45,7 @@ namespace YashvisBookStore.Areas.Admin.Controllers
 
         public IActionResult Upsert(Category category)
         {
-            if (ModelState.IsValid)             // checks all validations in the model (e.g. Name Required) to increase security
+            if (ModelState.IsValid)         // checks all validations in the model (e.g. Name Required) to increase security
             {
                 if (category.Id == 0)
                 {
@@ -71,6 +71,20 @@ namespace YashvisBookStore.Areas.Admin.Controllers
             //return NotFound();
             var allObj = _unitOfWork.Category.GetAll();
             return Json(new { data = allObj });
+        }
+
+        [HttpDelete]
+
+        public IActionResult Delete(int id)
+        {
+            var objFromDb = _unitOfWork.Category.Get(id);
+            if(objFromDb == null)
+            {
+                return Json(new{ success = false, message = "Error while deleting"});
+            }
+            _unitOfWork.Category.Remove(objFromDb);
+            _unitOfWork.Save();
+            return Json(new { success = true, messaage = "Delete successful" });
         }
         #endregion
     }

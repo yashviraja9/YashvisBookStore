@@ -26,7 +26,7 @@ namespace YashvisBooks.DataAccess.Repository
             if(objFromDb != null)
             {
                 objFromDb.Name = category.Name;
-                _db.SaveChanges();
+                //_db.SaveChanges();
             }
         }
 
@@ -34,10 +34,10 @@ namespace YashvisBooks.DataAccess.Repository
         {
             throw new NotImplementedException();
         }
-
         public void Update(Category category)
         {
             throw new NotImplementedException();
         }
+
     }
 }
