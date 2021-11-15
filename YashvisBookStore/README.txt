@@ -204,3 +204,18 @@ Create another parital view for _EditAndBackToListButton and note the code addit
 Modify the Upsert.cshtml, Add the asp-action to the Index.cshtml page and run the application, Navigate to Category > Create New Category.
 
 Modify Upsert.cshtml so TITLE now uses the @title variable and refresh the application. Add the @section call to Scripts to validate input on the client-side and test.
+
+Now create an Upsert POST action method in the CategoryController.cs, Note the Save method is not available, now add the void Save() method to the IUnitOfWork interface.
+
+Remove the _db.SaveChanges() method in the CategoryRepository.cs and move the _unitOfWork.Save() method with the return RedirectToaction method.
+
+Check for errors and test whether the application can update and create a category. Add the API call for HTTPDelete in the CategoryController.cs
+
+Then implement the HTTPDelete with a delete method in category.js to add functionality to the application and call the API.
+
+Add the delete functionality in category.js with including the onclick event to the Delete function, Add the Delete(url) function code.
+
+Finish at - 12:50 - total : 1 hr : 25 mins.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
