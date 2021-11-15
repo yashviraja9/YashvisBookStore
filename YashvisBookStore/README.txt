@@ -198,5 +198,9 @@ Time to apply the code to activate the ‘Edit’ and ‘Delete’ buttons and �
 
 Add the IAction result to the controller and add a View, Copy and add the html from the Category Upsert View.txt
 
-Create a partial view for the EDIT | BACK. In the general Views > Shared folder, add the partial view for _CreateAndBackToListButton.cshtml and add the asp-action
+Create a partial view for the EDIT | BACK. In the general Views > Shared folder, add the partial view for _CreateAndBackToListButton.cshtml and add the asp-action.
 Create another parital view for _EditAndBackToListButton and note the code addition of the @model razor statement
+
+Modify the Upsert.cshtml, Add the asp-action to the Index.cshtml page and run the application, Navigate to Category > Create New Category.
+
+Modify Upsert.cshtml so TITLE now uses the @title variable and refresh the application. Add the @section call to Scripts to validate input on the client-side and test.

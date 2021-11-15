@@ -36,7 +36,30 @@ namespace YashvisBookStore.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-            return View();
+            return View(category);
+        }
+
+        //use HTTP POST to deine the post-action method
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+
+        public IActionResult Upsert(Category category)
+        {
+            if (ModelState.IsValid)             // checks all validations in the model (e.g. Name Required) to increase security
+            {
+                if (category.Id == 0)
+                {
+                    _unitOfWork.Category.Add(category);
+                    _unitOfWork.Save();
+                }
+                else
+                {
+                    _unitOfWork.Category.Update(category);
+                }
+
+
+            }
+            return View(category);
         }
 
         //API calls here
@@ -49,6 +72,6 @@ namespace YashvisBookStore.Areas.Admin.Controllers
             var allObj = _unitOfWork.Category.GetAll();
             return Json(new { data = allObj });
         }
+        #endregion
     }
-    #endregion
 }
