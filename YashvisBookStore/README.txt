@@ -189,3 +189,14 @@ when i try to run the project and click on category i get this error:
 An unhandled exception occurred while processing the request.
 InvalidOperationException: Unable to resolve service for type 'YashvisBooks.DataAccess.Repository.IRepository.IUnitOfWork'
 while attempting to activate 'YashvisBookStore.Areas.Admin.Controllers.CategoryController'.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Start Nov 15 : 11:25 am
+
+Time to apply the code to activate the ‘Edit’ and ‘Delete’ buttons and ‘Create New Category’ using the Upsert action
+
+Add the IAction result to the controller and add a View, Copy and add the html from the Category Upsert View.txt
+
+Create a partial view for the EDIT | BACK. In the general Views > Shared folder, add the partial view for _CreateAndBackToListButton.cshtml and add the asp-action
+Create another parital view for _EditAndBackToListButton and note the code addition of the @model razor statement
