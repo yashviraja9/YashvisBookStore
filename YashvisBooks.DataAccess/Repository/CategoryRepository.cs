@@ -26,11 +26,16 @@ namespace YashvisBooks.DataAccess.Repository
             if(objFromDb != null)
             {
                 objFromDb.Name = category.Name;
-               // _db.SaveChanges();
+                _db.SaveChanges();
             }
         }
 
         public void Update(CategoryRepository category)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update(Category category)
         {
             throw new NotImplementedException();
         }
