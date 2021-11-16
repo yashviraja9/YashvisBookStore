@@ -13,6 +13,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using YashvisBookStore.DataAccess.Data;
 using YashvisBooks.DataAccess.Repository.IRepository;
+using YashvisBooks.DataAccess.Repository;
 
 namespace YashvisBookStore
 {
@@ -36,7 +37,7 @@ namespace YashvisBookStore
             //removed 'options => options.SignIn.RequireConfirmedAccount = true ' 
             services.AddDefaultIdentity<IdentityUser>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
-            //services.AddScoped<IUnitOfWork, UnitOfWork>();  //why is this happening? 
+            services.AddScoped<IUnitOfWork, UnitOfWork>();  //why is this happening? 
             services.AddControllersWithViews();
         }
 
