@@ -219,3 +219,11 @@ Finish at - 12:50 - total : 1 hr : 25 mins.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+Start at 9:13 pm
+
+I look over in power point again and verified my code, I get error in startup page i get it correct by modifying unitOfWork.cs page,
+i add ': IUnitOfWork' this in public class defination. Now i can see category when i run my project.
+
+End at 9:32 pm - total - 18 mins
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
