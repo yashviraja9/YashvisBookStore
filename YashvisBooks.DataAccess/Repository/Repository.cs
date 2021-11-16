@@ -23,12 +23,14 @@ namespace YashvisBooks.DataAccess.Repository
 
         public void Add(T entity)
         {
-            throw new NotImplementedException();
+            dbSet.Add(entity);
+            //throw new NotImplementedException();
         }
 
         public T Get(int id)
         {
-            throw new NotImplementedException();
+            return dbSet.Find(id);
+            //throw new NotImplementedException();
         }
 
         public IEnumerable<T> GetAll(Expression<Func<T, bool>> filter = null, Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null, string includeProperties = null)
@@ -87,6 +89,11 @@ namespace YashvisBooks.DataAccess.Repository
         public void RemoveRange(IEnumerable<T> entity)
         {
             dbSet.RemoveRange(entity);
+        }
+
+        public void RemoveRnge(IEnumerable<T> entity)
+        {
+            throw new NotImplementedException();
         }
     }
 }
