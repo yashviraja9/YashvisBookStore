@@ -51,7 +51,7 @@ namespace YashvisBooks.DataAccess.Repository
             {
                 return orderBy(query).ToList();
             }
-            return query.ToList();
+            return query.ToList();              // returns the IEnumerable based on the conditions of the query
         }
 
         public T GetFirstOrDefault(Expression<Func<T, bool>> filter = null, string includeProperties = null)
@@ -70,7 +70,7 @@ namespace YashvisBooks.DataAccess.Repository
                 }
             }
 
-            return query.FirstOrDefault();
+            return query.FirstOrDefault();                  // returns the IEnumerable based on the conditions of the query
         }
 
         public void Remove(int id)
