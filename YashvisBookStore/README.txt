@@ -227,3 +227,7 @@ i add ': IUnitOfWork' this in public class defination. Now i can see category wh
 End at 9:32 pm - total - 18 mins
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Start at - 9:20 am
+
+Start part 3.1 - Cover Type CRUD
