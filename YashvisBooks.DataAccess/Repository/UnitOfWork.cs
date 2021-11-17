@@ -17,6 +17,7 @@ namespace YashvisBooks.DataAccess.Repository
             _db = db;
             Category = new CategoryRepository(_db);
             SP_Call = new SP_Call(_db);
+            CoverType = new CoverTypeRepository(_db);
         }
 
         public ICategoryRepository Category { get; private set; }
@@ -25,7 +26,7 @@ namespace YashvisBooks.DataAccess.Repository
 
         public ICoverTypeRepository CoverType { get; private set; }
 
-        ICategoryRepository IUnitOfWork.CoverType => throw new NotImplementedException();
+       // ICategoryRepository IUnitOfWork.CoverType => throw new NotImplementedException();
 
         public void Dispose()
         {

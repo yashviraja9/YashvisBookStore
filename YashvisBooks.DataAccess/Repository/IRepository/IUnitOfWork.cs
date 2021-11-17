@@ -10,7 +10,7 @@ namespace YashvisBooks.DataAccess.Repository.IRepository
     {
         ICategoryRepository Category { get; }
         ISP_Call SP_Call { get; }
-        ICategoryRepository CoverType { get; }
+        ICoverTypeRepository CoverType { get; }
 
         void Save();
     }

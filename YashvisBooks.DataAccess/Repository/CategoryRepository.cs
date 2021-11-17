@@ -18,6 +18,11 @@ namespace YashvisBooks.DataAccess.Repository
             _db = db;
         }
 
+        public void Add(CoverType coverType)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Upadte(Category category)
         {
             //use .NET LINQ to retrieve the first or default category object,
@@ -35,6 +40,11 @@ namespace YashvisBooks.DataAccess.Repository
             throw new NotImplementedException();
         }
         public void Update(Category category)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update(CoverType coverType)
         {
             throw new NotImplementedException();
         }
