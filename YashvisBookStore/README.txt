@@ -231,3 +231,12 @@ End at 9:32 pm - total - 18 mins
 Start at - 9:20 am
 
 Start part 3.1 - Cover Type CRUD
+
+Create Cover Type CRUD with the exact same methods used for Category CRUD. Add CoverType.cs in the Model's folder, CoverType Model, ID and Name.
+
+Add CoverType to the Repository. Add CoverTypeRepository Class. Add ICoverTypeRepository Interface.
+Add CoverType to UnitOfWork and IUnitofWork. Push CoverType to the Database. Create migration and update the DB.
+
+Perform CRUD operations on Cover Type. Add Cover Type to NavBar. Add CoverType Controller with all required Action Methods.
+Cover Type Index View to use DataTables. Cover Type Upsert View takes care of creating and updating CoverType.
+The delete CoverType is done using the API Call.
