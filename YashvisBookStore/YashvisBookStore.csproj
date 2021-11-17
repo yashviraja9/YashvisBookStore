@@ -30,4 +30,8 @@
     <ProjectReference Include="..\YashvisBooks.Utility\YashvisBooks.Utility.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Views\Product\" />
+  </ItemGroup>
+
 </Project>

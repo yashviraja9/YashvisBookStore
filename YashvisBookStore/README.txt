@@ -240,3 +240,23 @@ Add CoverType to UnitOfWork and IUnitofWork. Push CoverType to the Database. Cre
 Perform CRUD operations on Cover Type. Add Cover Type to NavBar. Add CoverType Controller with all required Action Methods.
 Cover Type Index View to use DataTables. Cover Type Upsert View takes care of creating and updating CoverType.
 The delete CoverType is done using the API Call.
+
+Finish at 11:50 pm - total - 1 hr -30 mins
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Start at - 12:55 am - Part 3.2 Product CRUD
+
+Add a new class (Product) in the .Models project. Add the code to build the blueprint of this class and make sure it’s “public” and that any errors are resolved
+
+Add reference to the new Products piece to the database in the ApplicationDbContext.cs file
+
+In the PM Console, run the add-migration command for an  ‘addProductToDb’ migration and update-database
+
+Note the new migration file in the Migrations folder and put this timestamp in the README
+
+In the SOE review the newly created Products table
+
+Update the Product class so Title, ISBN and Author are [Required], create a new migration (addValidationToProduct) and update the database
+
+

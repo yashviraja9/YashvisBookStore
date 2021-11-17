@@ -18,6 +18,11 @@ namespace YashvisBooks.DataAccess.Repository
             _db = db;
         }
 
+        public void Remove(Product objFromDb)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Upadte(CoverType coverType)
         {
             //use .NET LINQ to retrieve the first or default Cover Type object,
@@ -35,6 +40,11 @@ namespace YashvisBooks.DataAccess.Repository
             throw new NotImplementedException();
         }
         public void Update(CoverType coverType)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update(Product product)
         {
             throw new NotImplementedException();
         }

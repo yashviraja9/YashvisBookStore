@@ -18,6 +18,6 @@ namespace YashvisBookStore.DataAccess.Data
 
         public DbSet<CoverType> CoverTypes { get; set; }
 
-
+        public DbSet<Product> Products { get; set; }
     }
 }

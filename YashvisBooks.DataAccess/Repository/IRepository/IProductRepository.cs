@@ -7,10 +7,12 @@ using System.Threading.Tasks;
 
 namespace YashvisBooks.DataAccess.Repository.IRepository
 {
-    public interface ICoverTypeRepository : IRepository<CoverType>
+    public interface IProductRepository : IRepository<Product>
     {
-        void Update(CoverTypeRepository product);
-        void Update(Product product);
+        void Update(ProductRepository coverType);
+        void Update(CoverType coverType);
+        void Remove(CoverType objFromDb);
+        void Add(object product);
         void Remove(Product objFromDb);
     }
 }
