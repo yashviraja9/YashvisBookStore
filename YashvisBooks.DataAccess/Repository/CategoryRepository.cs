@@ -48,5 +48,10 @@ namespace YashvisBooks.DataAccess.Repository
         {
             throw new NotImplementedException();
         }
+
+        public void Update(Product product)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

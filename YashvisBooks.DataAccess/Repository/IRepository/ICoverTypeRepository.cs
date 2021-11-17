@@ -12,5 +12,6 @@ namespace YashvisBooks.DataAccess.Repository.IRepository
         void Update(CoverTypeRepository product);
         void Update(Product product);
         void Remove(Product objFromDb);
+        void Update(CoverType coverType);
     }
 }
