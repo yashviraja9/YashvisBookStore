@@ -57,5 +57,10 @@ namespace YashvisBooks.DataAccess.Repository.IRepository
         {
             throw new NotImplementedException();
         }
+
+        public void Add(object product)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
