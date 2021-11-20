@@ -17,7 +17,7 @@ Now open https://bootswatch.com and select one of cosmo theme and download it an
 Open views/chared/_Layout.cshtml change the file name in link tag.
 Update the changes to github repository.
 
-finish at 10:40am
+finish at 10:40am - total - 55 min.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -34,7 +34,7 @@ Add three (3) new projects (class library) to the application: YashvisBooks.Data
 Install Microsoft.EntityFrameworkCore.Relational and Core.SqlServer packages. Delete the Migrations folder. Add another package Identity.EntityFrameworkCore,
 upload changes to github.
 
-Finish at 12:55pm 
+Finish at 12:55 pm - total - 1 hr : 28 mins
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -67,7 +67,7 @@ Modify the _ViewStart.cshtml to reflect the new path. Run the application now.
 
 Update the changes to github repository.
 
-finish at 2:50pm
+finish at 2:50pm - total - 1 hr : 50 mins.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -82,7 +82,7 @@ Register the constraint type with 'Microsoft.AspNetCore.Routing.RouteOptions.Con
 
 Update changes to GitHub repository.
 
-Finish at 9:50pm
+Finish at 9:50pm - total - 20 mins.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -114,6 +114,8 @@ Update this and note the added using statement, re-run the add-migration, but i 
 and add that migration again, review the changes to the AddCategoryToDb (resolve the duplication error that will occur).
 
 Update the database, confirm the new Categories table via the SQL SOE and push commits to GitHub.
+
+Finish at - 12:57 pm - total - 1 hr : 53 min.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -161,7 +163,7 @@ YashvisBookStore	C:\Users\W0766432\Source\Repos\YashvisBookStore\YashvisBookStor
 
 so i just comment out the statement that throw an error and i push commits to GitHub.
 
-Finish at 2:22pm
+Finish at 2:22 pm - total - 1 hr - 32 min.  
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Start Nov 10 : 9:25am
@@ -190,6 +192,8 @@ An unhandled exception occurred while processing the request.
 InvalidOperationException: Unable to resolve service for type 'YashvisBooks.DataAccess.Repository.IRepository.IUnitOfWork'
 while attempting to activate 'YashvisBookStore.Areas.Admin.Controllers.CategoryController'.
 
+Finish at 10:54 am - total - 1 hr : 25 min.
+
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Start Nov 15 : 11:25 am
@@ -215,11 +219,11 @@ Then implement the HTTPDelete with a delete method in category.js to add functio
 
 Add the delete functionality in category.js with including the onclick event to the Delete function, Add the Delete(url) function code.
 
-Finish at - 12:50 - total : 1 hr : 25 mins.
+Finish at - 12:50 - total - 1 hr : 25 mins.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Start at 9:13 pm
+Start - at 9:13 pm
 
 I look over in power point again and verified my code, I get error in startup page i get it correct by modifying unitOfWork.cs page,
 i add ': IUnitOfWork' this in public class defination. Now i can see category when i run my project.
@@ -228,9 +232,7 @@ End at 9:32 pm - total - 18 mins
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Start at - 9:20 am
-
-Start part 3.1 - Cover Type CRUD
+Start 17 Nov at - 9:20 am - Start part 3.1 - Cover Type CRUD
 
 Create Cover Type CRUD with the exact same methods used for Category CRUD. Add CoverType.cs in the Model's folder, CoverType Model, ID and Name.
 
@@ -245,18 +247,22 @@ Finish at 11:50 pm - total - 1 hr -30 mins
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Start at - 12:55 am - Part 3.2 Product CRUD
+Start at - 12:55 pm - Part 3.2 Product CRUD
 
 Add a new class (Product) in the .Models project. Add the code to build the blueprint of this class and make sure it’s “public” and that any errors are resolved
 
-Add reference to the new Products piece to the database in the ApplicationDbContext.cs file
+Add reference to the new Products piece to the database in the ApplicationDbContext.cs file. In the PM Console, run the add-migration command for an  ‘addProductToDb’ migration and update-database.
 
-In the PM Console, run the add-migration command for an  ‘addProductToDb’ migration and update-database
+Note the new migration file in the Migrations folder and with this timestamp 20211117182543_AddProductToDb.cs.
 
-Note the new migration file in the Migrations folder and put this timestamp in the README
+In the SOE review the newly created Products table.
+Update the Product class so Title, ISBN and Author are Required, create a new migration (addValidationToProduct) and update the database.
 
-In the SOE review the newly created Products table
+Add Product to the Repository. Add IProductRepository Interface. Add ProductRepository Class. Add Product to UnitOfWork and IUnitofWork
+Build and check for errors, resolve and push to GitHub.
 
-Update the Product class so Title, ISBN and Author are [Required], create a new migration (addValidationToProduct) and update the database
+Finish at 2:22 pm - total - 1hr : 28 mins.
 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+Start at - 22 Nov - 
