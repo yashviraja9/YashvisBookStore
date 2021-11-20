@@ -249,7 +249,8 @@ Finish at 11:50 pm - total - 1 hr -30 mins
 
 Start at - 12:55 pm - Part 3.2 Product CRUD
 
-Add a new class (Product) in the .Models project. Add the code to build the blueprint of this class and make sure it’s “public” and that any errors are resolved
+Add a new class (Product) in the .Models project. Add the code to build the blueprint of this class and 
+make sure it’s “public” and that any errors are resolved.
 
 Add reference to the new Products piece to the database in the ApplicationDbContext.cs file. In the PM Console, run the add-migration command for an  ‘addProductToDb’ migration and update-database.
 
