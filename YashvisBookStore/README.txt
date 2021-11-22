@@ -252,7 +252,8 @@ Start at - 12:55 pm - Part 3.2 Product CRUD
 Add a new class (Product) in the .Models project. Add the code to build the blueprint of this class and 
 make sure it’s “public” and that any errors are resolved.
 
-Add reference to the new Products piece to the database in the ApplicationDbContext.cs file. In the PM Console, run the add-migration command for an  ‘addProductToDb’ migration and update-database.
+Add reference to the new Products piece to the database in the ApplicationDbContext.cs file. In the PM Console, run the add-migration command for an 
+‘addProductToDb’ migration and update-database.
 
 Note the new migration file in the Migrations folder and with this timestamp 20211117182543_AddProductToDb.cs.
 
@@ -268,5 +269,24 @@ Finish at 2:22 pm - total - 1hr : 28 mins.
 
 Start at - 22 Nov - 9:04 am - Start part 3.2 Product CRUD
 
+Add Product Controller To the Areas > Admin > Controllers to perform the CRUD operations.
+Add the IWebHostEvironment call and its using statement to the Microsoft.AspNetCore.Hosting, note the changes to the public ProductController method.
 
+Create a ViewModel in the Models project to hold the Product object and select list for Category and CoverType. Modify the ProductVM class so it is public and
+intall the Microsoft.AspNetCore.Mvc.ViewFeatures package.
 
+Modify the ProductController so the IActionResult Upsert calls to the ProductVM view model, include the using statements to the ViewModels folder and Microsoft.AspNetCore.Mvc.Rendering.
+
+I get following error in productController for Upsert method : 0S0266: Can not convert implicitly covert type. line number - 31, 38.
+
+Comment out the Upsert post method for now, Modify the API call to include the Category and CoverType properites. Add an Index view.
+
+When i create Upsert.cshtml in Product - Views folder, i get error on line number - 70, 80.
+
+Copy the Index.cshtml code from Views/Category and modify to the Product List header, Create New Product and add the following properties – Title / ISBN / Price / Author / Category 
+and reference a new product.js file.
+Copy/Paste the category.js and rename to product.js and modify the URL to point to Product. Modify the _Layout.cshtml to add a new link to Product.
+
+Finish at - 10:45 am - total - 1 hr: 40 mins
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
