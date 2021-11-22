@@ -1,10 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using YashvisBooks.DataAccess.Repository.IRepository;
 using YashvisBooks.Models;
+using YashvisBooks.Models.ViewModels;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace YashvisBookStore.Areas.Admin.Controllers
 {
@@ -12,54 +15,49 @@ namespace YashvisBookStore.Areas.Admin.Controllers
     public class ProductController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
+        private readonly IWebHostEnvironment _hostEnvironment;
 
-        public ProductController(IUnitOfWork unitOfWork)
+        public ProductController(IUnitOfWork unitOfWork, IWebHostEnvironment hostEnvironment)
         {
             _unitOfWork = unitOfWork;
+            _hostEnvironment = hostEnvironment;
         }
+        public IActionResult Upsert(int? id)        // get action method for Upsert
+        {
+            ProductVM productVM = new ProductVM()
+            {
+                Product = new Product(),
+                //get error so i do explicit cast
+                CategoryList = (IEnumerable<System.Web.Mvc.SelectListItem>)_unitOfWork.Category.GetAll().Select(i => new SelectListItem
+                {
+                    Text = i.Name,
+                    Value = i.Id.ToString()
 
+                }),
+                //get error so i do explicit cast
+                CoverTypeList = (IEnumerable<System.Web.Mvc.SelectListItem>)_unitOfWork.CoverType.GetAll().Select(i => new SelectListItem
+                {
+                    Text = i.Name,
+                    Value = i.Id.ToString()
+                }),
+            };      // using YashvisBooks.Models;
+            if (id == null)
+            {
+                // this for the create
+                return View(productVM);
+            }
+            productVM.Product = _unitOfWork.Product.Get(id.GetValueOrDefault());
+            if (productVM.Product == null)
+            {
+                // this is for the edit
+                return NotFound();
+            }
+            return View(productVM);
+
+        }
         public IActionResult Index()
         {
             return View();
-        }
-
-        public IActionResult Upsert(int? id)
-        {
-            Product product = new Product();
-            if (id == null)
-            {
-                return View(product);
-            }
-
-            product = _unitOfWork.Product.Get(id.GetValueOrDefault());
-            if (product == null)
-            {
-                return NotFound();
-            }
-            return View(product);
-        }
-
-        //use HTTP POST to deine the post-action method
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-
-        public IActionResult Upsert(Product product)
-        {
-            if (ModelState.IsValid)         // checks all validations in the model (e.g. Name Required) to increase security
-            {
-                if (product.Id == 0)
-                {
-                    _unitOfWork.Product.Add(product);
-                }
-                else
-                {
-                    _unitOfWork.Category.Update(product);
-                }
-                _unitOfWork.Save();
-                return RedirectToAction(nameof(Index));         // to see all the categories
-
-            }
-            return View(product);
         }
 
         //API calls here
@@ -69,7 +67,7 @@ namespace YashvisBookStore.Areas.Admin.Controllers
         public IActionResult GetAll()
         {
             //return NotFound();
-            var allObj = _unitOfWork.Product.GetAll();
+            var allObj = _unitOfWork.Product.GetAll(includeProperties:"Category, Covertype");
             return Json(new { data = allObj });
         }
 
