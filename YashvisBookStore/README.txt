@@ -281,7 +281,7 @@ I get following error in productController for Upsert method : 0S0266: Can not c
 
 Comment out the Upsert post method for now, Modify the API call to include the Category and CoverType properites. Add an Index view.
 
-When i create Upsert.cshtml in Product - Views folder, i get error on line number - 70, 80.
+When i create Upsert.cshtml in Product - Views folder, i get error on line number - 70, 80 - CS1503 -
 
 Copy the Index.cshtml code from Views/Category and modify to the Product List header, Create New Product and add the following properties – Title / ISBN / Price / Author / Category 
 and reference a new product.js file.
