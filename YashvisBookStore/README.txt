@@ -287,6 +287,8 @@ Copy the Index.cshtml code from Views/Category and modify to the Product List he
 and reference a new product.js file.
 Copy/Paste the category.js and rename to product.js and modify the URL to point to Product. Modify the _Layout.cshtml to add a new link to Product.
 
+I solve error on Product controller page by install package Microsoft.AspNetCore.Mvc.ViewFeatures.
+
 Finish at - 10:45 am - total - 1 hr: 40 mins
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
