@@ -273,7 +273,6 @@ Add Product Controller To the Areas > Admin > Controllers to perform the CRUD op
 Add the IWebHostEvironment call and its using statement to the Microsoft.AspNetCore.Hosting, note the changes to the public ProductController method.
 
 Create a ViewModel in the Models project to hold the Product object and select list for Category and CoverType. Modify the ProductVM class so it is public and
-intall the Microsoft.AspNetCore.Mvc.ViewFeatures package.
 
 Modify the ProductController so the IActionResult Upsert calls to the ProductVM view model, include the using statements to the ViewModels folder and Microsoft.AspNetCore.Mvc.Rendering.
 
@@ -287,7 +286,7 @@ Copy the Index.cshtml code from Views/Category and modify to the Product List he
 and reference a new product.js file.
 Copy/Paste the category.js and rename to product.js and modify the URL to point to Product. Modify the _Layout.cshtml to add a new link to Product.
 
-I solve error on Product controller page by install package Microsoft.AspNetCore.Mvc.ViewFeatures.
+I solve error on Product controller page by install the package Microsoft.AspNetCore.Mvc.ViewFeatures.
 
 Finish at - 10:45 am - total - 1 hr: 40 mins
 
