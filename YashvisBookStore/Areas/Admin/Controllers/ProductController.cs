@@ -58,6 +58,29 @@ namespace YashvisBookStore.Areas.Admin.Controllers
             return View();
         }
 
+        //use HTTP POST to deine the post-action method
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+
+        public IActionResult Upsert(Product product)
+        {
+            if (ModelState.IsValid)         // checks all validations in the model (e.g. Name Required) to increase security
+            {
+                if (product.Id == 0)
+                {
+                    _unitOfWork.CoverType.Add(product);
+                }
+                else
+                {
+                    _unitOfWork.CoverType.Update(product);
+                }
+                _unitOfWork.Save();
+                return RedirectToAction(nameof(Index));         // to see all the products
+
+            }
+            return View(product);
+        }
+
         //API calls here
         #region API CALLS
         [HttpGet]

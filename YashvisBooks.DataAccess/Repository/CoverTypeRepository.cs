@@ -18,6 +18,11 @@ namespace YashvisBooks.DataAccess.Repository
             _db = db;
         }
 
+        public void Add(Product product)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Remove(Product objFromDb)
         {
             throw new NotImplementedException();

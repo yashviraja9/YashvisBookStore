@@ -294,3 +294,19 @@ Finish at - 10:45 am - total - 1 hr: 40 mins
 Nov 24 - start at 9:39 am 
 
 clone repoistory and update database, run the application to verify category, cover type and product works properly when click on drop down menu.
+
+10: 20am - Start Part 3.3
+
+Create an Upsert.cs for Products and modify in Areas > Admin > Views > Product.
+
+Add a rich textbox to the textarea inside Product with tiny.cloud by creating an account using the API key provided, initialize and 
+add a function to validate input and if empty, display a Sweet Alert. Run the application and see what happens when you select ‘Create new Product’.
+
+Add a new folder and subfolder in wwwroot > images/products. In the ProductController configure the Product Upsert Post action method.
+Uncomment the method and modify it. Check for errors, run the application and test.
+
+commit changes to github.
+
+Finish at - 10 : 35am - 54 mins.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
