@@ -38,7 +38,7 @@ Finish at 12:55 pm - total - 1 hr : 28 mins
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-start at 1:10pm
+Nov 1 - start at 1:10pm
 
 Modify the namespace in ApplicatiobDbContext page and delete the class1 file from .DataAccess,
 .Models and .Utility project. try to build project and move on next step
@@ -71,7 +71,7 @@ finish at 2:50pm - total - 1 hr : 50 mins.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-start at 9:30pm
+Nov 1 - start at 9:30pm
 
 Add a new Admin area in Areas. Add the view files _ViewImports and _ViewStart and delete the Data and Models folder. Delete the Controllers folder.
 
@@ -119,7 +119,7 @@ Finish at - 12:57 pm - total - 1 hr : 53 min.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-12:55pm Start Part 2.2 - Repository 
+Nov 08 - 12:55pm Start Part 2.2 - Repository 
 
 After creating the Category.cs and adding it to the ApplicationDbContext it’s time to implement the Repository, a generic way of accessing common functionality, in the .DataAccess project.
 
@@ -223,7 +223,7 @@ Finish at - 12:50 - total - 1 hr : 25 mins.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Start - at 9:13 pm
+Nov 15 - Start - at 9:13 pm
 
 I look over in power point again and verified my code, I get error in startup page i get it correct by modifying unitOfWork.cs page,
 i add ': IUnitOfWork' this in public class defination. Now i can see category when i run my project.
@@ -291,3 +291,6 @@ I solve error on Product controller page by install the package Microsoft.AspNet
 Finish at - 10:45 am - total - 1 hr: 40 mins
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
+Nov 24 - start at 9:39 am 
+
+clone repoistory and update database, run the application to verify category, cover type and product works properly when click on drop down menu.
