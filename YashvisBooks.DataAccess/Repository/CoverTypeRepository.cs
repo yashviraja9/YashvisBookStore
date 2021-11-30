@@ -20,8 +20,6 @@ namespace YashvisBooks.DataAccess.Repository
 
         public void Update(CoverType coverType)
         {
-            //use .NET LINQ to retrieve the first or default Cover Type object,
-            // then pass the id as a generic entity which matches the cover type ID
             var objFromDb = _db.CoverTypes.FirstOrDefault(s => s.Id == coverType.Id);
             if (objFromDb != null)
             {
