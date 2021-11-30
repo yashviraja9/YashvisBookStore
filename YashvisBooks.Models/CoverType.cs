@@ -12,7 +12,7 @@ namespace YashvisBooks.Models
         [Key]
         public int Id { get; set; }
 
-        [Display(Name = "Cover Type Name")]
+        [Display(Name = "Cover Type")]
         [Required]
         [MaxLength(50)]
 

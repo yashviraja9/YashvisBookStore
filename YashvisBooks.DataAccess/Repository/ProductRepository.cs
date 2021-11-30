@@ -18,11 +18,6 @@ namespace YashvisBooks.DataAccess.Repository.IRepository
             _db = db;
         }
 
-        public void Add(CoverType coverType)
-        {
-            throw new NotImplementedException();
-        }
-
         public void Update(Product product)
         {
             var objFromDb = _db.Products.FirstOrDefault(s => s.Id == product.Id);
@@ -41,26 +36,6 @@ namespace YashvisBooks.DataAccess.Repository.IRepository
                 objFromDb.CoverTypeId = product.CoverTypeId;    // all properties of Product object
 
             }
-        }
-
-        public void Remove(CoverType objFromDb)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Update(ProductRepository coverType)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Update(CoverType coverType)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Add(object product)
-        {
-            throw new NotImplementedException();
         }
     }
 }

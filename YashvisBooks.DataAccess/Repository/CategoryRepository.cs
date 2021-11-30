@@ -23,7 +23,7 @@ namespace YashvisBooks.DataAccess.Repository
             throw new NotImplementedException();
         }
 
-        public void Upadte(Category category)
+        public void Update(Category category)
         {
             //use .NET LINQ to retrieve the first or default category object,
             // then pass the id as a generic entity which matches the category ID
@@ -31,27 +31,7 @@ namespace YashvisBooks.DataAccess.Repository
             if(objFromDb != null)
             {
                 objFromDb.Name = category.Name;
-                //_db.SaveChanges();
             }
-        }
-
-        public void Update(CategoryRepository category)
-        {
-            throw new NotImplementedException();
-        }
-        public void Update(Category category)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Update(CoverType coverType)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Update(Product product)
-        {
-            throw new NotImplementedException();
         }
     }
 }
