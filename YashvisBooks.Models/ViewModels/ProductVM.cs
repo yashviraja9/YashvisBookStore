@@ -9,10 +9,8 @@ namespace YashvisBooks.Models.ViewModels
 {
     public class ProductVM
     {
-        public Product Product { get; set; }       // Display all the product etails
-
-        public IEnumerable<SelectListItem> CategoryList { get; set; }   // install package 'Microsoft.AspNetCore.Mvc.ViewFeatures'
-
-        public IEnumerable<SelectListItem> CoverTypeList { get; set; }  
+        public Product Product { get; set; }
+        public IEnumerable<SelectListItem> CategoryList { get; set; }
+        public IEnumerable<SelectListItem> CoverTypeList { get; set; }
     }
 }

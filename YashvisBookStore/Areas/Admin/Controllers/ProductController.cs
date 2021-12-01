@@ -29,7 +29,7 @@ namespace YashvisBookStore.Areas.Admin.Controllers
             return View();
         }
 
-        public IActionResult Upsert(int? id)        // get action method for Upsert
+        public IActionResult Upsert(int? id)
         {
             ProductVM productVM = new ProductVM()
             {
@@ -38,33 +38,29 @@ namespace YashvisBookStore.Areas.Admin.Controllers
                 {
                     Text = i.Name,
                     Value = i.Id.ToString()
-
                 }),
                 CoverTypeList = _unitOfWork.CoverType.GetAll().Select(i => new SelectListItem
                 {
                     Text = i.Name,
                     Value = i.Id.ToString()
-                }),
-            };      // using YashvisBooks.Models;
+                })
+            };
             if (id == null)
             {
-                // this for the create
+                // this is for create
                 return View(productVM);
             }
+            // this is for edit
             productVM.Product = _unitOfWork.Product.Get(id.GetValueOrDefault());
             if (productVM.Product == null)
             {
-                // this is for the edit
                 return NotFound();
             }
             return View(productVM);
-
         }
 
-        //use HTTP POST to deine the post-action method
         [HttpPost]
         [ValidateAntiForgeryToken]
-
         public IActionResult Upsert(ProductVM productVM)
         {
             if (ModelState.IsValid)
@@ -133,19 +129,16 @@ namespace YashvisBookStore.Areas.Admin.Controllers
             return View(productVM);
         }
 
-        //API calls here
         #region API CALLS
-        [HttpGet]
 
+        [HttpGet]
         public IActionResult GetAll()
         {
-            //return NotFound();
-            var allObj = _unitOfWork.Product.GetAll(includeProperties:"Category, Covertype");
+            var allObj = _unitOfWork.Product.GetAll(includeProperties: "Category,CoverType");
             return Json(new { data = allObj });
         }
 
         [HttpDelete]
-
         public IActionResult Delete(int id)
         {
             var objFromDb = _unitOfWork.Product.Get(id);
@@ -161,8 +154,10 @@ namespace YashvisBookStore.Areas.Admin.Controllers
             }
             _unitOfWork.Product.Remove(objFromDb);
             _unitOfWork.Save();
-            return Json(new { success = true, message = "Delete successful" });
+            return Json(new { success = true, message = "Delete Successful" });
         }
+
         #endregion
+
     }
 }

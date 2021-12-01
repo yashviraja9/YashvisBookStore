@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace YashvisBooks.DataAccess.Repository.IRepository
+namespace YashvisBooks.DataAccess.Repository
 {
     public class ProductRepository : Repository<Product>, IProductRepository
     {

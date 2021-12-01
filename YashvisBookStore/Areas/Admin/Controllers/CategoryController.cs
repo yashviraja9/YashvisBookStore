@@ -40,13 +40,11 @@ namespace YashvisBookStore.Areas.Admin.Controllers
             return View(category);
         }
 
-        //use HTTP POST to deine the post-action method
         [HttpPost]
         [ValidateAntiForgeryToken]
-
         public IActionResult Upsert(Category category)
         {
-            if (ModelState.IsValid)         // checks all validations in the model (e.g. Name Required) to increase security
+            if (ModelState.IsValid)
             {
                 if (category.Id == 0)
                 {
@@ -57,36 +55,34 @@ namespace YashvisBookStore.Areas.Admin.Controllers
                     _unitOfWork.Category.Update(category);
                 }
                 _unitOfWork.Save();
-                return RedirectToAction(nameof(Index));         // to see all the categories
-
+                return RedirectToAction(nameof(Index));
             }
             return View(category);
         }
 
-        //API calls here
         #region API CALLS
-        [HttpGet]
 
+        [HttpGet]
         public IActionResult GetAll()
         {
-            //return NotFound();
             var allObj = _unitOfWork.Category.GetAll();
             return Json(new { data = allObj });
         }
 
         [HttpDelete]
-
         public IActionResult Delete(int id)
         {
             var objFromDb = _unitOfWork.Category.Get(id);
-            if(objFromDb == null)
+            if (objFromDb == null)
             {
-                return Json(new{ success = false, message = "Error while deleting"});
+                return Json(new { success = false, message = "Error while deleting" });
             }
             _unitOfWork.Category.Remove(objFromDb);
             _unitOfWork.Save();
-            return Json(new { success = true, message = "Delete successful" });
+            return Json(new { success = true, message = "Delete Successful" });
         }
+
         #endregion
+
     }
 }

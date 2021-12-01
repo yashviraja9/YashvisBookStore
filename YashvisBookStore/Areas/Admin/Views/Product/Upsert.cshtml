@@ -8,7 +8,7 @@
 <form method="post" enctype="multipart/form-data">
     <div class="row p-3 border">
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-        @if (Model.Product.Id != 0)       // if this value is null it will not display 'Edit Category', change to  0
+        @if (Model.Product.Id != 0)
         {
             // edit
             title = "Edit Product";
@@ -51,6 +51,7 @@
                 </div>
                 <div class="col-8">
                     <textarea asp-for="Product.Description" class="form-control"></textarea>
+                    <span asp-validation-for="Product.Author" class="text-danger"></span>
                 </div>
             </div>
             <div class="form-group row">

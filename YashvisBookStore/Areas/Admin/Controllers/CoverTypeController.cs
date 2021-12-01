@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Dapper;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using YashvisBooks.DataAccess.Repository.IRepository;
 using YashvisBooks.Models;
+using YashvisBooks.Utility;
 
 namespace YashvisBookStore.Areas.Admin.Controllers
 {
@@ -40,14 +42,13 @@ namespace YashvisBookStore.Areas.Admin.Controllers
             return View(coverType);
         }
 
-        //use HTTP POST to deine the post-action method
         [HttpPost]
         [ValidateAntiForgeryToken]
-
         public IActionResult Upsert(CoverType coverType)
         {
-            if (ModelState.IsValid)         // checks all validations in the model (e.g. Name Required) to increase security
+            if (ModelState.IsValid)
             {
+
                 if (coverType.Id == 0)
                 {
                     _unitOfWork.CoverType.Add(coverType);
@@ -57,25 +58,20 @@ namespace YashvisBookStore.Areas.Admin.Controllers
                     _unitOfWork.CoverType.Update(coverType);
                 }
                 _unitOfWork.Save();
-                return RedirectToAction(nameof(Index));         // to see all the cover types
-
+                return RedirectToAction(nameof(Index));
             }
             return View(coverType);
         }
 
-        //API calls here
         #region API CALLS
-        [HttpGet]
 
         public IActionResult GetAll()
         {
-            //return NotFound();
             var allObj = _unitOfWork.CoverType.GetAll();
             return Json(new { data = allObj });
         }
 
         [HttpDelete]
-
         public IActionResult Delete(int id)
         {
             var objFromDb = _unitOfWork.CoverType.Get(id);
@@ -87,6 +83,7 @@ namespace YashvisBookStore.Areas.Admin.Controllers
             _unitOfWork.Save();
             return Json(new { success = true, message = "Delete successful" });
         }
+
         #endregion
     }
 }
