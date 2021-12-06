@@ -330,3 +330,6 @@ Update readme and push changes to the github.
 
 Finish at - 10:25 am - Total - 1 hr : 23 mins.
 ----------------------------------------------------------------------------------------------------------------------------------------------------
+Dec 6 -  Start at - 11:05 am
+
+First update database, dowmload some images for books, and make sure everything is working properly by adding product, category and covertype.
