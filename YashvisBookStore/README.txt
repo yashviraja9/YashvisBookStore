@@ -90,7 +90,7 @@ Nov 03 : 9:25am
 
 I solved error by modified statup page.
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Nov 08 : 10:55am - Start Part - 2.1 - Create the DB
 
@@ -110,8 +110,8 @@ Add a new table to the DB by creating a Category model and push it to the DB: Ad
 
 add-migration AddCategoryToDb via the PM Console- , The new migration file will be empty because it hasn’t been added to the Application DB Context
 
-Update this and note the added using statement, re-run the add-migration, but i get error that The name 'AddCategoryToDb' is used by an existing migration, so i deleted already existed and 
-and add that migration again, review the changes to the AddCategoryToDb (resolve the duplication error that will occur).
+Update this and note the added using statement, re-run the add-migration, but i get error that The name 'AddCategoryToDb' is used by an existing migration, 
+so i deleted already existed and add that migration again, review the changes to the AddCategoryToDb (resolve the duplication error that will occur).
 
 Update the database, confirm the new Categories table via the SQL SOE and push commits to GitHub.
 
@@ -143,7 +143,8 @@ Build, fix any error and push commits to GitHub.
 
 Implement a stored procedure repository and map multiple repositories in a Unit of Work
 
-Add a new interface in the IRepository folder - ISP_Call.cs – that extends IDisposable, Include the methods shown and install the NuGet package for Dapper. Now implement this with a new class in the Repository folder.
+Add a new interface in the IRepository folder - ISP_Call.cs – that extends IDisposable, Include the methods shown and install the NuGet package for Dapper.
+Now implement this with a new class in the Repository folder.
 
 Add a new class (SP_Call.cs) in the Repository folder, select the appropriate using statement and implement the ISP_Call interface
 
